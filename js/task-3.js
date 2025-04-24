@@ -5,22 +5,17 @@ const profile = {
     changeUserName(newName) {
         console.log("old user name is ", this.username);
         this.username = newName;
-        console.log(this.username);
-
     },
     updatePlayTime(saatler) {
-        this.playTime = saatler;
+        this.playTime += saatler;
     },
     getInfo() {
         return `${this.username} has ${this.playTime} active hours!`
     }
 };
 
-//before updates jacob has 300 active hours.
-console.log(profile.getInfo());
-//
-// now change username and playtime
-profile.changeUserName("Thorfin");
-profile.updatePlayTime(1200);
-console.log(profile.getInfo());
-//so ez
+console.log(profile.getInfo()); // "Jacob has 300 active hours!"
+profile.changeUserName("Marco");
+console.log(profile.getInfo()); // "Marco has 300 active hours!"
+profile.updatePlayTime(20);
+console.log(profile.getInfo()); // "Marco has 320 active hours!"
