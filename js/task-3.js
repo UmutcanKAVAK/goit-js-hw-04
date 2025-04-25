@@ -6,8 +6,8 @@ const profile = {
         console.log("old user name is ", this.username);
         this.username = newName;
     },
-    updatePlayTime(saatler) {
-        this.playTime += saatler;
+    updatePlayTime(hours) {
+        this.playTime += hours;
     },
     getInfo() {
         return `${this.username} has ${this.playTime} active hours!`
